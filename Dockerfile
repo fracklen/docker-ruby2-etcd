@@ -8,8 +8,8 @@ RUN apt-get update -y
 RUN apt-get install -y python-software-properties build-essential libpq-dev curl postgresql-client
 RUN apt-add-repository ppa:brightbox/ruby-ng
 
-RUN apt-get update
-RUN apt-get install -y ruby2.0 ruby2.0-dev ruby2.0-doc 
+RUN apt-get update -y
+RUN apt-get install -y ruby2.1 ruby2.1-dev ruby2.1-doc 
 RUN gem install bundler --no-rdoc --no-ri
 RUN gem install etcd -v=0.0.5
 RUN gem install systemu -v=2.6.2
